@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game-app';
+
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+
+
+  onIncrementedAdded(firedNumber: number) {
+    // console.log(event);
+
+    if (firedNumber % 2 === 0 ) {
+      this.evenNumbers.push(firedNumber);
+    } else {
+      this.oddNumbers.push(firedNumber);
+    }
+  }
+
+
 }
